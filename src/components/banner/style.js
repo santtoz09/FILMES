@@ -14,9 +14,10 @@ const styles = StyleSheet.create({
     letterSpacing: 3
   },
   titleName: {
+    paddingTop: 8,
     color: 'white',
-    fontSize: 16,
-    fontWeight: '400',
+    fontSize: 20,
+    fontWeight: '700',
   }
 });
 
