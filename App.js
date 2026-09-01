@@ -4,6 +4,7 @@ import Feather from '@expo/vector-icons/Feather';
 import Header from './src/components/header';
 import Search from './src/components/search';
 import Banner from './src/components/banner';
+import CardMovies from './src/components/cardMovies';
 import Filmes from './data/movies';
 
 export default function App() {
@@ -15,26 +16,25 @@ export default function App() {
       <Banner></Banner>
 
 
-      <View style={{ width: '85%'}}>
+      <View style={{ width: '85%' }}>
         <FlatList
           showsVerticalScrollIndicator={false}
           horizontal={true}
           data={Filmes}
           keyExtractor={(item) => item.id}
-          renderItem={({ item }) => (
+          renderItem=
+          {
+            ({ item }) => (
 
+          <CardMovies
+          titulo={item.nome}
+          imagem={item.imagem}
+          nota={item.imdb}
+          />
 
-
-
-            <TouchableOpacity style={styles.containerFilmes}>
-
-              <Image style={styles.images} source={{ uri: item.imagem }} />
-
-              <Text style={styles.titulo}>{item.nome} </Text>
-
-              <Text style={styles.textNota}>{item.imdb} </Text>
-            </TouchableOpacity>
-          )}
+         
+            )
+          }
 
 
         />

@@ -1,20 +1,19 @@
-
 import Feather from '@expo/vector-icons/Feather';
-import { StyleSheet, Text, View, TouchableOpacity, Image,TextInput } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Image, TextInput } from 'react-native';
 import styles from './style'
 
-export default function Header(){
-    return(
+export default function Header() {
+    return (
 
-    <View style={styles.viewHeader}>
+        <View style={styles.viewHeader}>
 
-         <Feather name="menu" size={24} color="white" />
+            <Feather name="menu" size={24} color="white" />
 
-         <Text style={styles.titulo}> TECFILMES </Text>
+            <Text style={styles.titulo}> TECFILMES </Text>
 
-         <TouchableOpacity>
-         </TouchableOpacity>
- 
-       </View>
+            <TouchableOpacity>
+            </TouchableOpacity>
+
+        </View>
     );
 }
