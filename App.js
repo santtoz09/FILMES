@@ -4,9 +4,8 @@ import Feather from '@expo/vector-icons/Feather';
 import Header from './src/components/header';
 import Search from './src/components/search';
 import Banner from './src/components/banner';
-import CardMovies from './src/components/cardMovies';
 import Filmes from './data/movies';
-
+import CardMovies from './src/components/cardMovies'
 export default function App() {
   return (
     <View style={styles.container}>
@@ -26,20 +25,14 @@ export default function App() {
           {
             ({ item }) => (
 
-          <CardMovies
-          titulo={item.nome}
-          imagem={item.imagem}
-          nota={item.imdb}
-          />
-
-         
+            <CardMovies
+            titulo={item.nome}
+            imagem={item.imagem}
+            nota={item.imdb}
+            ></CardMovies>
             )
           }
-
-
         />
-
-
       </View>
     </View>
   );
