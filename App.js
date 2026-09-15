@@ -5,7 +5,10 @@ import Header from './src/components/header';
 import Search from './src/components/search';
 import Banner from './src/components/banner';
 import Filmes from './data/movies';
-import CardMovies from './src/components/cardMovies'
+import CardMovies from './src/components/cardMovies';
+import Rotas from './src/rotas';
+
+
 export default function App() {
   return (
     <View style={styles.container}>
@@ -25,11 +28,11 @@ export default function App() {
           {
             ({ item }) => (
 
-            <CardMovies
-            titulo={item.nome}
-            imagem={item.imagem}
-            nota={item.imdb}
-            ></CardMovies>
+              <CardMovies
+                titulo={item.nome}
+                imagem={item.imagem}
+                nota={item.imdb}
+              ></CardMovies>
             )
           }
         />
