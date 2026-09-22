@@ -1,18 +1,23 @@
-import { NavigationContainer } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Detalhes from '../Telas/Detalhes';
+import Home from '../Telas/Home';
 
-export default function Rotas(){
-    const Stack = createStackNavigator();
+const Stack = createStackNavigator();
 
-    return(
+export default function Rotas() {
+    return (
         <NavigationContainer>
             <Stack.Navigator>
 
                 <Stack.Screen 
-                component={Detalhes} 
-                name= 'Detalhes' />
+                name="Home" 
+                component={Home} />
 
+                <Stack.Screen 
+                name="Detalhes" 
+                component={Detalhes} />
+                
             </Stack.Navigator>
         </NavigationContainer>
     );
