@@ -2,27 +2,40 @@ import { View, Text, Image } from 'react-native'
 import { useRoute } from '@react-navigation/native';
 
 
+import styles from './style'
 
 export default function Detalhes() {
 
     const route = useRoute();
 
     return (
-        <View>
-            <Text> 
-                TELA DE DETALHES
-            </Text>
+        <View style={styles.container}>
 
-            <Text> 
+            <Image
+                style={styles.images}
+                source={{ uri: route.params.imagem }}
+            />
+
+            <Text
+                style={styles.titulo}>
+
                 {route.params.titulo}
             </Text>
 
-            <Text> 
-                {route.params.nota}
+            <Text
+                style={styles.textNota}>
+                IMdB: {route.params.nota}
             </Text>
 
-            <Image style={{width: '90%', height: 300 }} source={{uri: route.params.imagem}} /> 
-            
+            <Text
+                style={styles.sinopseTitulo}>
+                Sinopse:
+            </Text>
+
+            <Text
+                style={styles.sinopse}>
+                {route.params.sinopse}
+            </Text>
         </View>
     );
 }

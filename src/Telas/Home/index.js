@@ -31,6 +31,7 @@ export default function Home() {
                 titulo={item.nome}
                 imagem={item.imagem}
                 nota={item.imdb}
+                sinopse={item.sinopse}
               ></CardMovies>
             )
           }
@@ -74,6 +75,4 @@ const styles = StyleSheet.create({
     height: 170,
     borderRadius: 8
   }
-
-
 });
