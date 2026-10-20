@@ -1,5 +1,7 @@
 import { View, Text, Image } from 'react-native'
-import { useRoute } from '@react-navigation/native';
+import { useRoute } from '@react-navigation/native'
+import { FontAwesome } from '@react-native-vector-icons/fontawesome';
+
 
 
 import styles from './style'
@@ -22,10 +24,19 @@ export default function Detalhes() {
                 {route.params.titulo}
             </Text>
 
+
             <Text
                 style={styles.textNota}>
-                IMdB: {route.params.nota}
+                <FontAwesome
+                    name="star"
+                    color="#cec000"
+                    size={20}
+                />
+                {route.params.nota}
             </Text>
+
+
+
 
             <Text
                 style={styles.sinopseTitulo}>
